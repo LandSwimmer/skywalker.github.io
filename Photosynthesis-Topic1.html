@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Science Web</title>
+  <link rel="stylesheet" href="topic1-style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Complex Science Stuff</h1>
+    <button id="sidebar-toggle">Links</button>
+  </header>
+  
+  <main>
+    <div class="sidebar">
+      <div>
+        <h3>Topics</h3>
+
+        <nav>
+
+          <ul>
+            <li><a href="index.html">Photosynthesis</a></li>
+            <ul>
+              <li><a href="Photosynthesis-Topic1.html">Where Photosynthesis Happens</a></li>
+              <li><a href="Photosynthesis-Topic2.html">Stages of Photosynthesis</a></li>
+              <li><a href="Photosynthesis-Topic3.html">What Affects Photosynthesis</a></li>
+            </ul>
+
+
+          </ul>
+
+        </nav>
+
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="img-container">
+          <div>
+            <img src="plant.png" title="Plant" alt="Image of Plant">
+            <div class="buttons">
+              <button>Next</button>
+            </div>
+          </div>
+
+          <div>
+            <img src="leaf.png" title="Leaf and Stromata" alt="Image of Leaf">
+            <div class="buttons">
+              <button>Back</button>
+              <button>Next</button>
+            </div>
+          </div>
+
+          <div>
+            <img src="mesophyll.png" title="Mesophyll" alt="Image of Mesophyll">
+            <div class="buttons">
+              <button>Back</button>
+              <button>Next</button>
+            </div>
+          </div>
+
+          <div>
+            <img src="chloroplast.png" title="Chloroplast" alt="Image of Chloroplast">
+            <div class="buttons">
+              <button>Back</button>
+              <button>Next</button>
+            </div>
+          </div>
+          
+          <div>
+            <img src="stroma.png" title="Stroma" alt="Image of Stroma">
+            <div class="buttons">
+              <button>Back</button>
+              <button>Next</button>
+            </div>
+          </div>
+
+          <div>
+            <img src="grana.png" title="Grana and Thylakoid" alt="Image of Grana">
+            <div class="buttons">
+              <button>Back</button>
+              <button>Next</button>
+            </div>
+          </div>
+
+          <div>
+            <img src="chlorophyll.png" title="Chlorophyll" alt="Image of Chlorophyll">
+            <div class="buttons">
+              <button>Back</button>
+              <button>Return</button>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+    <div class="infos">
+      <div>
+        <h2>Where does Photosynthesis Happen?</h2>
+        <p>Photosynthesis does not happen in just one place. It is carried out by different parts of the plant, each with a specific role that helps capture sunlight, take in gases, and produce food.</p>
+      </div>
+      <div>
+        <h2>Inside a Leaf: Photosynthesis Parts</h2>
+        <dl>
+          <dt>Plant</dt>
+          <dd>The plant is the overall system that performs photosynthesis to make its own food. It absorbs water through the roots, carbon dioxide through the leaves, and sunlight from the environment. All these materials are transported to the leaves, where photosynthesis mainly occurs.</dd>
+
+          <dt>Leaf</dt>
+          <dd>The leaf is the primary site of photosynthesis. Its flat and wide shape helps it capture more sunlight. Inside the leaf are specialized cells and structures that allow gases to enter and light energy to be absorbed efficiently.</dd>
+
+          <dt>Stomata</dt>
+          <dd>Stomata are tiny openings on the surface of the leaf. They open and close to control gas exchange:
+              <li>Let carbon dioxide (CO₂) enter the leaf</li>
+              <li>Release oxygen (O₂) as a waste product</li>
+              They also help regulate water loss through transpiration.
+          </dd>
+
+          <dt>Mesophyll</dt>
+          <dd>The mesophyll is the inner tissue of the leaf. It contains many chloroplasts and is where most photosynthesis happens. There are air spaces here that allow carbon dioxide to move easily to the photosynthesizing cells.</dd>
+
+          <dt>Chloroplast</dt>
+          <dd>The chloroplast is the organelle where photosynthesis takes place. It contains chlorophyll, the green pigment that absorbs sunlight. Inside the chloroplast are structures that convert light energy into chemical energy (glucose).</dd>
+
+          <dt>Stroma</dt>
+          <dd>The stroma is the fluid-filled space surrounding the grana inside the chloroplast. This is where the light-independent reactions (Calvin Cycle) happen, using carbon dioxide and the energy from ATP and NADPH to produce glucose.</dd>
+
+          <dt>Granum</dt>
+          <dd>A granum (plural: grana) is a stack of thylakoids inside the chloroplast. These stacks increase the surface area for capturing light, making the light-dependent reactions of photosynthesis more efficient.</dd>
+
+          <dt>Thylakoid</dt>
+          <dd>The thylakoid is a flattened membrane sac that contains chlorophyll. This is where the light-dependent reactions occur:
+              <li>Sunlight is absorbed</li>
+              <li>Water is split</li>
+              <li>Energy molecules (ATP and NADPH) are produced</li>
+          </dd>
+          
+          <dt>Chlorophyll</dt>
+          <dd>Chlorophyll is a green pigment found inside the thylakoid membranes of the chloroplast. Its main behavior is absorbing light energy, especially blue and red light from the sun. This absorbed energy excites electrons, which starts the light-dependent reactions of photosynthesis. Chlorophyll reflects green light, which is why plants appear green to our eyes.</dd>
+        </dl>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+<script>
+// Existing variables (from your slider JS)
+const container = document.querySelector('.img-container');
+const slides = document.querySelectorAll('.img-container > div');
+let currentIndex = 0;
+
+// Function to update the container's position (slide)
+function updatePosition() {
+  container.style.transform = `translateX(-${(currentIndex * 100) / 7}%)`;
+}
+
+// Function to clear highlights from all <dd> in .infos
+function clearInfoHighlights() {
+  document.querySelectorAll('.infos dd').forEach(dd => {
+    dd.classList.remove('highlight');
+  });
+}
+
+// Function to highlight <dd> based on <dt> text
+function highlightInfo(dtTexts) {
+  dtTexts.forEach(text => {
+    const dt = Array.from(document.querySelectorAll('.infos dt')).find(dt => dt.textContent.trim() === text);
+    if (dt) {
+      const dd = dt.nextElementSibling;
+      if (dd && dd.tagName === 'DD') {
+        dd.classList.add('highlight');
+      }
+    }
+  });
+}
+
+// Function to clear highlights from all images
+function clearImageHighlights() {
+  document.querySelectorAll('.img-container img').forEach(img => {
+    img.classList.remove('highlight');
+  });
+}
+
+// Function to highlight an image by index
+function highlightImage(index) {
+  clearImageHighlights();
+  const img = slides[index].querySelector('img');
+  if (img) {
+    img.classList.add('highlight');
+  }
+}
+
+// Add click listeners to images (existing logic: highlight info)
+document.querySelectorAll('.img-container img').forEach((img, index) => {
+  img.addEventListener('click', () => {
+    const title = img.getAttribute('title');
+    clearInfoHighlights(); // Clear 'highlight' from <dd>s
+    clearClickedHighlights(); // New: Clear 'clicked' from <dt>/<dd>s
+    
+    switch (title) {
+      case 'Plant':
+        highlightInfo(['Plant']);
+        break;
+      case 'Leaf and Stromata':
+        highlightInfo(['Leaf', 'Stomata']);
+        break;
+      case 'Mesophyll':
+        highlightInfo(['Mesophyll']);
+        break;
+      case 'Chloroplast':
+        highlightInfo(['Chloroplast']);
+        break;
+      case 'Stroma':
+        highlightInfo(['Stroma']);
+        break;
+      case 'Grana and Thylakoid':
+        highlightInfo(['Granum', 'Thylakoid']);
+        break;
+      case 'Chlorophyll':
+        highlightInfo(['Chlorophyll']);
+        break;
+    }
+  });
+});
+
+// Function to clear clicked highlights from <dt> and <dd>
+function clearClickedHighlights() {
+  document.querySelectorAll('.infos dt, .infos dd').forEach(el => {
+    el.classList.remove('clicked');
+  });
+}
+
+// Updated: Add click listeners to <dt> and <dd> in .infos (slide to image and highlight it)
+document.querySelectorAll('.infos dt, .infos dd').forEach(el => {
+  el.addEventListener('click', () => {
+    let dtText = '';
+    
+    if (el.tagName === 'DT') {
+      dtText = el.textContent.trim();
+    } else if (el.tagName === 'DD') {
+      // For <dd>, get the text from the previous <dt>
+      const prevDt = el.previousElementSibling;
+      if (prevDt && prevDt.tagName === 'DT') {
+        dtText = prevDt.textContent.trim();
+      }
+    }
+    
+    if (dtText) {
+      let targetIndex = -1;
+      
+      // Map <dt> text to slide index (same as before)
+      switch (dtText) {
+        case 'Plant':
+          targetIndex = 0;
+          break;
+        case 'Leaf':
+        case 'Stomata':
+          targetIndex = 1;
+          break;
+        case 'Mesophyll':
+          targetIndex = 2;
+          break;
+        case 'Chloroplast':
+          targetIndex = 3;
+          break;
+        case 'Stroma':
+          targetIndex = 4;
+          break;
+        case 'Granum':
+        case 'Thylakoid':
+          targetIndex = 5;
+          break;
+        case 'Chlorophyll':
+          targetIndex = 6;
+          break;
+      }
+      
+      if (targetIndex !== -1) {
+        currentIndex = targetIndex;
+        updatePosition(); // Slide to the image
+        highlightImage(targetIndex); // Highlight the image
+        clearClickedHighlights(); // Clear previous clicked highlights
+        el.classList.add('clicked'); // Highlight the clicked <dt> or <dd>
+        
+        // New: If clicking a <dd>, also clear the 'highlight' from <dd>s (set by image clicks)
+        if (el.tagName === 'DD') {
+          clearInfoHighlights();
+        }
+      }
+    }
+  });
+});
+
+// Existing: Button listeners (Next, Back, Return) - unchanged
+document.querySelectorAll('button').forEach(button => {
+  button.addEventListener('click', () => {
+    const action = button.textContent.trim();
+    if (action === 'Next' && currentIndex < 6) {
+      currentIndex++;
+    } else if (action === 'Back' && currentIndex > 0) {
+      currentIndex--;
+    } else if (action === 'Return') {
+      currentIndex = 0;
+    }
+    updatePosition();
+    clearImageHighlights(); // Optional: Clear image highlights on button navigation
+  });
+});
+// Select the toggle button and sidebar
+const sidebarToggle = document.getElementById('sidebar-toggle');
+const sidebar = document.querySelector('.sidebar');
+
+// Add click event to toggle the sidebar
+sidebarToggle.addEventListener('click', () => {
+  sidebar.classList.toggle('show'); // Toggle the 'show' class
+});
+</script>
+
+</html>
