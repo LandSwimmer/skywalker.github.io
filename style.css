@@ -92,7 +92,7 @@ Everything in here styles the sidebar alone and its contents
   text-align: center;
   overflow: hidden;
   padding: 40px 0px 0px 0px;
-  overflow: auto;
+  overflow-y: auto;
 }
 .content .img-container{
   padding: 30px 0px 0px;
