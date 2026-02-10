@@ -302,6 +302,10 @@ main{
     width: 100%;
     height: auto;
   }
+  .content img{
+    height: 40vh;
+    width: auto;
+  }
   .infos{
     width: 100%;
     height: auto;
