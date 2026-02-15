@@ -295,9 +295,6 @@ main{
   }
 }
 @media (max-width: 750px){
-  main{
-    flex-wrap: wrap;
-  }
   .content{
     width: 100%;
     height: auto;
