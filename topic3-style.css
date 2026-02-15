@@ -251,6 +251,9 @@ main{
   header button{
     display: block;
   }
+  main{
+    flex-wrap: wrap;
+  }
   .sidebar{
     position: fixed;
     width: 300px;
@@ -292,19 +295,5 @@ main{
   }
   .infos{
     width: 100%;
-  }
-}
-@media (max-width: 750px){
-  .content{
-    width: 100%;
-    height: auto;
-  }
-  .content img{
-    height: 20vh;
-    width: auto;
-  }
-  .infos{
-    width: 100%;
-    height: auto;
   }
 }
