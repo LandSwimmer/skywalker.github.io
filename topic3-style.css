@@ -264,7 +264,7 @@ main{
     transform: translateX(0); /* Slide in to visible */
   }
   .content{
-    width: 50%;
+    width: 100%;
   }
   .content img{
     width: 50%;
@@ -291,7 +291,7 @@ main{
     font-size: 25px;
   }
   .infos{
-    width: 50%;
+    width: 100%;
   }
 }
 @media (max-width: 750px){
