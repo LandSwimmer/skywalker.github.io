@@ -301,12 +301,6 @@ body:has(#lightindependent:checked) #li-button{
     width: 100%;
     height: auto;
   }
-  .infos h2{
-    font-size: 30px;
-  }
-  .infos p, .infos dd, .infos ul, .infos label{
-    font-size: 23px;
-  }
   .infos label{
     align-items: center;
     display: flex;
