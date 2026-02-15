@@ -183,10 +183,4 @@ Everything in here styles the sidebar alone and its contents
     height: 35vh;
     width: auto;
   }
-  .infos h2{
-    font-size: 30px;
-  }
-  .infos p, .infos ul{
-    font-size: 26px;
-  }
 }
