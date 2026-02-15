@@ -243,24 +243,6 @@ main{
   transform: scale(1); /* Normal state */
 }
 
-@media (max-width: 750px){
-  main{
-    flex-wrap: wrap;
-  }
-  .content{
-    width: 100%;
-    height: auto;
-  }
-  .content img{
-    height: 20vh;
-    width: auto;
-  }
-  .infos{
-    width: 100%;
-    height: auto;
-  }
-}
-
 @media (max-width: 1200px){
   header{
     justify-content: space-between;
@@ -310,5 +292,22 @@ main{
   }
   .infos{
     width: 50%;
+  }
+}
+@media (max-width: 750px){
+  main{
+    flex-wrap: wrap;
+  }
+  .content{
+    width: 100%;
+    height: auto;
+  }
+  .content img{
+    height: 20vh;
+    width: auto;
+  }
+  .infos{
+    width: 100%;
+    height: auto;
   }
 }
